@@ -1,0 +1,22 @@
+name: deepfake-lowres
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - pillow
+  - tqdm
+  - pyyaml
+  - pip:
+      - torch
+      - torchvision
+      - timm
+      - opencv-python-headless
+      - lightgbm
+      - thop
+      - kagglehub
