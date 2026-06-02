@@ -1,0 +1,14 @@
+torch
+torchvision
+timm
+numpy
+pandas
+scikit-learn
+matplotlib
+pillow
+opencv-python-headless
+tqdm
+pyyaml
+lightgbm
+thop
+kagglehub
