@@ -1,1 +1,19 @@
-
+dataset: ffpp
+metadata_csv: /path/to/ffpp_preprocessed/metadata.csv
+balance_mode: undersample
+model: madcorn
+out_dir: outputs/madcorn_ffpp
+ckpt_name: best_madcorn_ffpp.pt
+resolutions: [128, 224, 256, 384]
+image_size_for_model: 224
+train_mode: multi_resolution
+batch_size: 32
+num_workers: 0
+epochs: 15
+lr: 0.001
+weight_decay: 0.0001
+base_ch: 32
+mixed_precision: true
+uncertain_low: 0.4
+uncertain_high: 0.6
+seed: 42
