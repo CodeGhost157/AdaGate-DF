@@ -1,1 +1,22 @@
-
+dataset: ffpp
+metadata_csv: /path/to/ffpp_preprocessed/metadata.csv
+balance_mode: oversample_real
+model: defakehoppp
+out_dir: outputs/defakehoppp_ffpp_oversampled
+image_size: 224
+resolutions: [128, 224, 256, 384]
+small_block_size: 13
+large_block_size: 32
+patch_size: 3
+stride: 2
+max_train_fit_per_class: 1500
+spatial_pca_energy: 0.80
+spatial_pca_max_channels: 10
+lgb_num_leaves: 64
+lgb_n_estimators: 300
+lgb_learning_rate: 0.05
+lgb_subsample: 0.8
+lgb_colsample_bytree: 0.8
+uncertain_low: 0.4
+uncertain_high: 0.6
+seed: 42
