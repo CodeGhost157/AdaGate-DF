@@ -148,57 +148,6 @@ python scripts/train_defakehoppp.py \
 
 This one can take a while because it fits PCA models, builds feature matrices, and then trains LightGBM.
 
-## Current notebook results
-
-These are the results extracted from the executed outputs in the current uploaded notebooks. Use them as a starting point, then regenerate all tables after final reruns in the cleaned repository.
-
-| Model | Dataset | Accuracy | AUC | F1 | Training time |
-| --- | --- | ---: | ---: | ---: | ---: |
-| EfficientNet-B4 Real/Fake | Celeb-DF v2 image dataset | 0.9968 | 0.9999 | 0.9968 | 70.11 min |
-| ShuffleNetV2 FF++ real oversampled | FaceForensics++ C23 | 0.7822 | 0.5383 | 0.8757 | 502.42 min |
-| MaD-CoRN-FFPP | FaceForensics++ C23 | 0.8571 | 0.5592 | 0.9230 | 646.90 min |
-| Gated Dual-Branch Deepfake Detector | FaceForensics++ C23 | 0.8571 | 0.5163 | 0.9230 | 334.93 min |
-
-### Resolution results from current notebooks
-
-EfficientNet-B4 on Celeb-DF:
-
-| Resolution | Accuracy | AUC |
-| ---: | ---: | ---: |
-| 128 | 0.8326 | 0.9467 |
-| 224 | 0.9968 | 0.9999 |
-| 256 | 0.9969 | 0.9999 |
-| 384 | 0.9661 | 0.9972 |
-
-ShuffleNetV2 on FaceForensics++ C23:
-
-| Resolution | Accuracy | AUC |
-| ---: | ---: | ---: |
-| 128 | 0.6282 | 0.5415 |
-| 224 | 0.8515 | 0.5336 |
-| 256 | 0.8088 | 0.5334 |
-| 384 | 0.8405 | 0.5355 |
-
-MaD-CoRN on FaceForensics++ C23:
-
-| Resolution | Accuracy | AUC |
-| ---: | ---: | ---: |
-| 128 | 0.8571 | 0.5639 |
-| 224 | 0.8571 | 0.5569 |
-| 256 | 0.8571 | 0.5590 |
-| 384 | 0.8571 | 0.5575 |
-
-Gated Dual-Branch on FaceForensics++ C23:
-
-| Resolution | Accuracy | AUC | Fast route | Medium route | Full route |
-| ---: | ---: | ---: | ---: | ---: | ---: |
-| 128 | 0.8571 | 0.5043 | 0.00% | 100.00% | 0.00% |
-| 224 | 0.8571 | 0.5253 | 88.64% | 11.36% | 0.00% |
-| 256 | 0.8571 | 0.5214 | 89.78% | 10.22% | 0.00% |
-| 384 | 0.8571 | 0.5202 | 89.37% | 10.29% | 0.34% |
-
-The DeFakeHop++ notebook output included preprocessing and feature-fitting progress, but the uploaded execution output did not include a completed final metric table. The cleaned training script will save `test_results.csv`, `accuracy_based_on_resolution.csv`, and `training_time.csv` after completion.
-
 ## Outputs saved by each run
 
 Each experiment folder is designed to contain:
