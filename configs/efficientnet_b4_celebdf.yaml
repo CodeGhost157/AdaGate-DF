@@ -1,1 +1,19 @@
-
+dataset: celebdf
+celebdf_root: /path/to/Celeb_V2
+model: efficientnet_b4
+backbone_name: tf_efficientnet_b4.ns_jft_in1k
+out_dir: outputs/efficientnet_b4_celebdf
+ckpt_name: best_efficientnet_b4_celebdf.pt
+image_size: 224
+image_size_for_model: 224
+train_mode: single_resolution
+batch_size: 16
+num_workers: 2
+epochs: 10
+lr: 0.0001
+weight_decay: 0.0001
+dropout: 0.2
+mixed_precision: true
+uncertain_low: 0.4
+uncertain_high: 0.6
+seed: 42
