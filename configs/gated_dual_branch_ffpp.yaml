@@ -1,1 +1,18 @@
-
+dataset: ffpp
+metadata_csv: /path/to/ffpp_preprocessed/metadata.csv
+balance_mode: none
+model: gated_dual_branch
+out_dir: outputs/gated_dual_branch_ffpp
+ckpt_name: best_gated_dual_branch_ffpp.pt
+resolutions: [128, 224, 256, 384]
+image_size_for_model: 224
+batch_size: 32
+num_workers: 2
+epochs: 8
+lr: 0.0002
+weight_decay: 0.0001
+mixed_precision: true
+uncertain_threshold: 0.65
+branch_channels: [12, 20, 32, 48]
+cache_features: false
+seed: 42
